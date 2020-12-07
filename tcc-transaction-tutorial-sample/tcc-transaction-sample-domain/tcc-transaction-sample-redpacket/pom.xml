@@ -30,9 +30,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-        </dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+            </dependency>
 
         <dependency>
             <groupId>mysql</groupId>

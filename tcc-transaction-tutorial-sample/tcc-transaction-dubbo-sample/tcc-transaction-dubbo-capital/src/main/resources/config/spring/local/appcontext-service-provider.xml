@@ -9,8 +9,7 @@
     <context:property-placeholder location="classpath:sample-dubbo-capital.properties"
                                   ignore-unresolvable="true"/>
 
-    <dubbo:registry id="capitalRpcZk" protocol="zookeeper" address="${zookeeper.address}"
-                    session="${zookeeper.session.timeout}" timeout="${zookeeper.connect.timeout}"/>
+    <dubbo:registry id="capitalRpcZk" protocol="nacos" address="127.0.0.1:8848"/>
 
     <dubbo:protocol name="dubbo" port="${dubbo.port}"/>
 

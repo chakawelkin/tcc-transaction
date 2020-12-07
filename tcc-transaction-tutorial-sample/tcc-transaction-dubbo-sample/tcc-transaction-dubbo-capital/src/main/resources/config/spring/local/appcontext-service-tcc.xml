@@ -22,18 +22,13 @@
         <property name="tbSuffix" value="_CAP"/>
     </bean>
 
-    <bean id="tccDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-          destroy-method="close" lazy-init="false">
-        <property name="driverClass" value="#{tccJdbc['jdbc.driverClassName']}"/>
-        <property name="jdbcUrl" value="#{tccJdbc['tcc.jdbc.url']}"/>
-        <property name="user" value="#{tccJdbc['jdbc.username']}"/>
+    <bean id="tccDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" lazy-init="false">
+        <property name="driverClassName" value="#{tccJdbc['jdbc.driverClassName']}"/>
+        <property name = "url" value="#{tccJdbc['tcc.jdbc.url']}"/>
+        <property name="username" value="#{tccJdbc['jdbc.username']}"/>
         <property name="password" value="#{tccJdbc['jdbc.password']}"/>
-        <property name="initialPoolSize" value="#{tccJdbc['c3p0.initialPoolSize']}"/>
-        <property name="minPoolSize" value="#{tccJdbc['c3p0.minPoolSize']}"/>
-        <property name="maxPoolSize" value="#{tccJdbc['c3p0.maxPoolSize']}"/>
-        <property name="acquireIncrement" value="#{tccJdbc['c3p0.acquireIncrement']}"/>
-        <property name="maxIdleTime" value="#{tccJdbc['c3p0.maxIdleTime']}"/>
-        <property name="checkoutTimeout" value="#{tccJdbc['c3p0.checkoutTimeout']}"/>
+        <property name="initialSize" value="#{tccJdbc['c3p0.initialPoolSize']}"/>
     </bean>
 
     <!--<bean id="transactionRepository" class="org.mengyun.tcctransaction.repository.RedisTransactionRepository">-->

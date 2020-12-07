@@ -6,12 +6,9 @@
 
     <context:property-placeholder location="classpath:sample-dubbo-order.properties"/>
 
-
     <dubbo:application name="sample-dubbo-order"/>
 
-    <dubbo:registry protocol="zookeeper" address="${zookeeper.address}"
-                    session="${zookeeper.session.timeout}"
-                    timeout="${zookeeper.connect.timeout}"/>
+    <dubbo:registry protocol="nacos" address="${nacos.address}"/>
 
     <dubbo:reference id="captialTradeOrderService"
                      interface="org.mengyun.tcctransaction.sample.dubbo.capital.api.CapitalTradeOrderService"
