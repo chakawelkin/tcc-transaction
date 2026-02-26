@@ -1,0 +1,24 @@
+server:
+  port: 12332
+  servlet:
+    context-path: /${spring.application.name}
+
+spring:
+  application:
+    name: tcc-transaction-server
+  tcc:
+    storage:
+      kryo-pool-size: 512
+      storage-type: memory
+    recovery:
+      recovery-enabled: false
+    registry:
+      registry-types:
+      - direct
+      cluster-name: default
+    remoting:
+      listen-port: 2332
+      request-process-thread-queue-capacity: 1024
+logging:
+  level:
+    root: info
