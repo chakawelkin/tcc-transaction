@@ -1,5 +1,7 @@
 # TCC-TRANSACTION 快速入门指南
 
+> **声明**：本项目核心代码来源于开源项目 [tcc-transaction](https://github.com/changmingxie/tcc-transaction)，由原作者 **Changming Xie** 维护。本文档旨在帮助用户在当前环境下快速上手。
+
 本文档将指引你如何快速启动 `tcc-transaction` 项目并运行演示示例 (Tutorial Sample)。
 
 ## 1. 环境要求

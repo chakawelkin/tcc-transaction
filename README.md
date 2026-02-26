@@ -1,5 +1,7 @@
 # TCC-TRANSACTION
 
+> **致敬原作者**：本项目 Fork 自 [changmingxie/tcc-transaction](https://github.com/changmingxie/tcc-transaction)。感谢作者 **Changming Xie** 提供的优秀分布式事务解决方案。
+
 ## TCC-TRANSACTION是什么
 
 [TCC-TRANSACTION](https://changmingxie.github.io)是一款开源的微服务架构下的TCC型分布式事务解决方案，致力于提供高性能和简单易用的分布式事务服务。
